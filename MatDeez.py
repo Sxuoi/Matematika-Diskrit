@@ -11,22 +11,22 @@ with open('random_forest_model.pkl', 'rb') as f:
 st.title('Electricity Consumption Predictor')
 st.sidebar.header('Input Features')
 
-temperature = st.sidebar.number_input('Temperature (°C)', min_value=0.0, max_value=50.0, value=25.0)
-humidity = st.sidebar.number_input('Humidity (%)', min_value=0.0, max_value=100.0, value=50.0)
-square_footage = st.sidebar.number_input('Square Footage', min_value=0.0, max_value=10000.0, value=1000.0)
-occupancy = st.sidebar.number_input('Occupancy', min_value=0, max_value=9, value=5)
+temperature = st.sidebar.number_input('Suhu (°C)', min_value=0.0, max_value=50.0, value=25.0)
+humidity = st.sidebar.number_input('Kelembapan (%)', min_value=0.0, max_value=100.0, value=50.0)
+square_footage = st.sidebar.number_input('Ukuran Bangunan (ft²)', min_value=0.0, max_value=10000.0, value=1000.0)
+occupancy = st.sidebar.number_input('Penghuni', min_value=0, max_value=9, value=5)
 
 
-hvac_usage = st.sidebar.selectbox('HVAC Usage', ['Off', 'On'])
+hvac_usage = st.sidebar.selectbox('Penggunaan AC Heater', ['Off', 'On'])
 hvac_usage_numeric = 1 if hvac_usage == 'On' else 0
 
-lighting_usage = st.sidebar.selectbox('Lighting Usage', ['Off', 'On'])
+lighting_usage = st.sidebar.selectbox('Penggunaan Lampu', ['Off', 'On'])
 lighting_usage_numeric = 1 if lighting_usage == 'On' else 0
 
-holiday = st.sidebar.selectbox('Is Holiday?', ['No', 'Yes'])
+holiday = st.sidebar.selectbox('Apakah Hari Libur?', ['Tidak', 'Ya'])
 holiday_numeric = 1 if holiday == 'Yes' else 0
 
-day_of_week = st.sidebar.selectbox('Day of Week', ['Weekday', 'Weekend'])
+day_of_week = st.sidebar.selectbox('Hari Apa?', ['Hari Kerja', 'Akhir Pekan'])
 day_of_week_numeric = 1 if day_of_week == 'Weekend' else 0
 
 
