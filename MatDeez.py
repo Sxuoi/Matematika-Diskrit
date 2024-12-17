@@ -12,8 +12,8 @@ st.title('Electricity Consumption Predictor')
 st.sidebar.header('Input Features')
 
 temperature = st.sidebar.number_input('Suhu (°C)', min_value=0.0, max_value=50.0, value=25.0)
-humidity = st.sidebar.number_input('Kelembapan (%)', min_value=0.0, max_value=100.0, value=50.0)
-square_footage = st.sidebar.number_input('Ukuran Bangunan (ft²)', min_value=0.0, max_value=10000.0, value=1000.0)
+humidity = st.sidebar.number_input('Kelembapan (%)', min_value=0.5, max_value=100.0, value=50.0)
+square_footage = st.sidebar.number_input('Ukuran Bangunan (ft²)', min_value=100.0, max_value=10000.0, value=1000.0)
 occupancy = st.sidebar.number_input('Penghuni', min_value=0, max_value=9, value=5)
 
 
